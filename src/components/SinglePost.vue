@@ -5,6 +5,7 @@
 
 <script>
 import { computed } from '@vue/runtime-core'
+
 export default {
     props: ['post'],
     setup(props){

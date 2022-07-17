@@ -8,13 +8,17 @@
 <script>
 import SinglePost from './SinglePost'
 import { ref } from '@vue/reactivity'
+import { onMounted, onUnmounted, onUpdated } from "@vue/runtime-core";
+
 export default {
   components: { SinglePost },
     props: [
         "posts"
     ],
     setup(props){
-        console.log(props.posts)
+        onMounted(() => console.log("mounted"));
+        onUnmounted(() => console.log("unmounted"));
+        onUpdated(() => console.log("updated"));
     }
 }
 </script>
